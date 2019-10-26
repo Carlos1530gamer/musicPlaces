@@ -25,6 +25,14 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="WwF-HZ-p9n">
                                 <rect key="frame" x="0.0" y="250" width="414" height="612"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <button key="tableFooterView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="35w-AF-RV3">
+                                    <rect key="frame" x="0.0" y="156" width="414" height="44"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <state key="normal" title="Button"/>
+                                    <connections>
+                                        <action selector="sdsad:" destination="BYZ-38-t0r" eventType="touchUpInside" id="PG5-2r-UOM"/>
+                                    </connections>
+                                </button>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="100" id="roy-Qz-J0p">
                                         <rect key="frame" x="0.0" y="28" width="414" height="100"/>
@@ -86,6 +94,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="musicPanelContainer" destination="VLc-NS-jj8" id="fYq-Wo-7aq"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -94,7 +105,7 @@
         <!--Search Song View Controller-->
         <scene sceneID="NAe-22-U11">
             <objects>
-                <viewController id="Esj-iF-p4n" customClass="SearchSongViewController" customModule="MusicPlaces" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SearchSongVC" id="Esj-iF-p4n" customClass="SearchSongViewController" customModule="MusicPlaces" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="GbJ-i7-vT0">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -155,5 +166,69 @@
             </objects>
             <point key="canvasLocation" x="1248" y="113"/>
         </scene>
+        <!--Music Header View Controller-->
+        <scene sceneID="lg3-Nc-Hwa">
+            <objects>
+                <viewController storyboardIdentifier="musicHeader" id="kim-oQ-F5J" customClass="MusicHeaderViewController" customModule="MusicPlaces" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="sVQ-gx-qxi">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="images" translatesAutoresizingMaskIntoConstraints="NO" id="emp-Jq-DN6">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                            <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xMw-iI-cBR">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="e2c-5x-eBK">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EjW-a5-H0Q">
+                                            <rect key="frame" x="189.5" y="430.5" width="35" height="35"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="35" id="WD0-Vt-K5Z"/>
+                                                <constraint firstAttribute="width" constant="35" id="fjg-Sp-QMr"/>
+                                            </constraints>
+                                            <state key="normal" image="playIcon"/>
+                                            <connections>
+                                                <action selector="playOrStopAction:" destination="kim-oQ-F5J" eventType="touchUpInside" id="rq5-cj-PIh"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="EjW-a5-H0Q" firstAttribute="centerY" secondItem="e2c-5x-eBK" secondAttribute="centerY" id="L75-ts-HP6"/>
+                                        <constraint firstItem="EjW-a5-H0Q" firstAttribute="centerX" secondItem="e2c-5x-eBK" secondAttribute="centerX" id="jYS-hG-LYZ"/>
+                                    </constraints>
+                                </view>
+                                <blurEffect style="regular"/>
+                            </visualEffectView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="xMw-iI-cBR" firstAttribute="top" secondItem="sVQ-gx-qxi" secondAttribute="top" id="3JR-0K-fke"/>
+                            <constraint firstItem="emp-Jq-DN6" firstAttribute="top" secondItem="sVQ-gx-qxi" secondAttribute="top" id="3c8-tk-qQz"/>
+                            <constraint firstAttribute="bottom" secondItem="emp-Jq-DN6" secondAttribute="bottom" id="A8I-AU-cEM"/>
+                            <constraint firstItem="emp-Jq-DN6" firstAttribute="leading" secondItem="dEV-4p-phE" secondAttribute="leading" id="HUi-ct-l9o"/>
+                            <constraint firstItem="xMw-iI-cBR" firstAttribute="leading" secondItem="dEV-4p-phE" secondAttribute="leading" id="bTV-Mc-PeK"/>
+                            <constraint firstItem="dEV-4p-phE" firstAttribute="trailing" secondItem="xMw-iI-cBR" secondAttribute="trailing" id="rLq-w0-49g"/>
+                            <constraint firstAttribute="bottom" secondItem="xMw-iI-cBR" secondAttribute="bottom" id="uxK-Wq-hlT"/>
+                            <constraint firstItem="dEV-4p-phE" firstAttribute="trailing" secondItem="emp-Jq-DN6" secondAttribute="trailing" id="xnI-ee-dcH"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="dEV-4p-phE"/>
+                    </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <connections>
+                        <outlet property="imageView" destination="emp-Jq-DN6" id="aTk-8U-kYH"/>
+                        <outlet property="playButton" destination="EjW-a5-H0Q" id="pk9-7A-rxB"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8uM-Th-szp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2486" y="113"/>
+        </scene>
     </scenes>
+    <resources>
+        <image name="images" width="554" height="554"/>
+        <image name="playIcon" width="25" height="25"/>
+    </resources>
 </document>

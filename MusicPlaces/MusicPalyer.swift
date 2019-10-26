@@ -10,18 +10,23 @@ import Foundation
 import AVFoundation
 
 class MusicPlayer {
-    var player = AVPlayer()
+    
+    private var player = AVPlayer()
+    private var isPlaying = false
     
     func set(song url: String) {
         guard let songUrl = URL(string: url) else { return }
         player = AVPlayer(url: songUrl)
     }
     
-    func play() {
-        player.play()
-    }
-    
-    func stop() {
-        player.pause()
+    func playOrPause(clousure: (_ : Bool) -> Void) {
+        if isPlaying {
+            player.pause()
+            isPlaying = false
+        }else{
+            player.play()
+            isPlaying = true
+        }
+        clousure(isPlaying)
     }
 }

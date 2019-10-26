@@ -21,6 +21,7 @@
 		3BE32319236402060080719F /* Endpoitns.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE32318236402060080719F /* Endpoitns.swift */; };
 		3BE3231B23640E950080719F /* UIImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE3231A23640E950080719F /* UIImageExtension.swift */; };
 		3BE3231D236410D40080719F /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE3231C236410D40080719F /* UIViewExtension.swift */; };
+		3BE3231F23641C920080719F /* MusicHeaderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE3231E23641C920080719F /* MusicHeaderViewController.swift */; };
 		D4E726DE2363EDA700718F83 /* Geolocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E726DD2363EDA700718F83 /* Geolocation.swift */; };
 /* End PBXBuildFile section */
 
@@ -41,6 +42,7 @@
 		3BE32318236402060080719F /* Endpoitns.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoitns.swift; sourceTree = "<group>"; };
 		3BE3231A23640E950080719F /* UIImageExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageExtension.swift; sourceTree = "<group>"; };
 		3BE3231C236410D40080719F /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
+		3BE3231E23641C920080719F /* MusicHeaderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicHeaderViewController.swift; sourceTree = "<group>"; };
 		D4E726DD2363EDA700718F83 /* Geolocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Geolocation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -90,6 +92,7 @@
 				3BE32318236402060080719F /* Endpoitns.swift */,
 				3BE3231A23640E950080719F /* UIImageExtension.swift */,
 				3BE3231C236410D40080719F /* UIViewExtension.swift */,
+				3BE3231E23641C920080719F /* MusicHeaderViewController.swift */,
 			);
 			path = MusicPlaces;
 			sourceTree = "<group>";
@@ -165,6 +168,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3BE3231F23641C920080719F /* MusicHeaderViewController.swift in Sources */,
 				3BE3230D2363FA9B0080719F /* MusicPalyer.swift in Sources */,
 				3BE3230F2363FBD40080719F /* SearchSongViewController.swift in Sources */,
 				D4E726DE2363EDA700718F83 /* Geolocation.swift in Sources */,
