@@ -22,6 +22,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         let mainVc = ViewController.intance()
         let bottomSlideUp = BottomMenuViewController.intance()
+        mainVc.bottomView = bottomSlideUp
+        bottomSlideUp.delegate = mainVc
+        bottomSlideUp.dataSource = mainVc
         
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.windowScene = windowScene

@@ -11,15 +11,21 @@ import CoreLocation
 
 class ViewController: UIViewController {
     
+    //MARK: - outlets
     @IBOutlet weak var musicPanelContainer: UIView!
+    
+    //MARK: - variables
+    var locationManager: CLLocationManager!
+    let header = MusicHeaderViewController.intance()
+    var bottomView: BottomMenuViewController?
+    
+    //MARK: - Computed vars
     private var selectedSong: ItunesSong? {
         didSet {
             guard let newSong = selectedSong else { return }
             self.header.setSong(newSong)
         }
     }
-    
-    let header = MusicHeaderViewController.intance()
     
     var location: CLLocation? {
         didSet {
@@ -31,17 +37,17 @@ class ViewController: UIViewController {
     
     var locationName: String? {
         willSet {
-            print(newValue)
+            self.bottomView?.reloadData()
         }
     }
     
     var locationAdministrativeArea: String? {
         willSet {
-            print(newValue)
+            // todo if need this var
         }
     }
     
-    var locationManager: CLLocationManager!
+    //MARK: - vc life cycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -49,6 +55,8 @@ class ViewController: UIViewController {
         musicPanelContainer.addSubview(header.view)
         header.view.frame = musicPanelContainer.bounds
     }
+    
+    //MARK: - public vars
     
     static func intance() -> ViewController {
         let storyBoard = UIStoryboard(name: "Main", bundle: nil)
@@ -58,9 +66,17 @@ class ViewController: UIViewController {
     
 }
 
-extension ViewController: SearchSongViewControllerDelegate {
+extension ViewController: BottomMenuViewControllerDelegate, BottomMenuViewControllerDataSource {
     
-    func searchSong(didSelect song: ItunesSong) {
+    func bottomMenulocation() -> String {
+        return self.locationName ?? ""
+    }
+    
+    func bottomMenuSelectedSong() -> ItunesSong? {
+        return self.selectedSong
+    }
+    
+    func userDidSelected(song: ItunesSong) {
         self.selectedSong = song
     }
     
