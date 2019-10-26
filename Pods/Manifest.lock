@@ -1,0 +1,16 @@
+PODS:
+  - Pulley (2.7.0)
+
+DEPENDENCIES:
+  - Pulley
+
+SPEC REPOS:
+  trunk:
+    - Pulley
+
+SPEC CHECKSUMS:
+  Pulley: 028ddcc7d2dcbc078d71b61b7eee8e786d72c14a
+
+PODFILE CHECKSUM: e5a0cb0f8b99032cf5dcd63d0f5d2afe6d259dc3
+
+COCOAPODS: 1.8.4
