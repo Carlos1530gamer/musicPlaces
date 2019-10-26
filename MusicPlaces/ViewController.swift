@@ -50,10 +50,10 @@ class ViewController: UIViewController {
         header.view.frame = musicPanelContainer.bounds
     }
     
-    @IBAction func sdsad(_ sender: Any) {
-        let searchSongVC = SearchSongViewController.intance()
-        searchSongVC.delegate = self
-        self.present(searchSongVC, animated: true, completion: nil)
+    static func intance() -> ViewController {
+        let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+        guard let vc = storyBoard.instantiateViewController(identifier: "mainVC") as? ViewController else { return ViewController() }
+        return vc
     }
     
 }
