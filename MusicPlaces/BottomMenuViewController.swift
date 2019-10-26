@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import IBMSwiftSDKCore
+import Assistant
 
 protocol BottomMenuViewControllerDataSource {
     func bottomMenulocation() -> String
@@ -61,6 +63,14 @@ class BottomMenuViewController: UIViewController {
         let searchSongVC = SearchSongViewController.intance()
         searchSongVC.delegate = self
         self.present(searchSongVC, animated: true, completion: nil)
+        let auth = WatsonIAMAuthenticator(apiKey: "0qh0PzQWia1p1B6UBmDE0fOwB0Tqd8RKsxs-OTERD4ir")
+        let service = Assistant(version: "2019-02-28",
+                                authenticator: auth)
+        service.serviceURL = "https://gateway-syd.watsonplatform.net/assistant/api/v1/workspaces/e06012b6-a396-435f-a86e-6c8417d70a0f/message"
+        let workspaceID = "e06012b6-a396-435f-a86e-6c8417d70a0f"
+        let input = MessageInput(text: "Buena", additionalProperties: [:])
+        
+        //service.message(workspaceID: <#T##String#>, completionHandler: <#T##(RestResponse<MessageResponse>?, WatsonError?) -> Void#>)
     }
     
     //MARK: - Private funcs

@@ -1,6 +1,8 @@
 ${PODS_ROOT}/Target Support Files/Pods-MusicPlaces/Pods-MusicPlaces-frameworks.sh
 ${BUILT_PRODUCTS_DIR}/BoringSSL-GRPC/openssl_grpc.framework
 ${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework
+${BUILT_PRODUCTS_DIR}/IBMSwiftSDKCore/IBMSwiftSDKCore.framework
+${BUILT_PRODUCTS_DIR}/IBMWatsonAssistantV1/Assistant.framework
 ${BUILT_PRODUCTS_DIR}/Protobuf/protobuf.framework
 ${BUILT_PRODUCTS_DIR}/Pulley/Pulley.framework
 ${BUILT_PRODUCTS_DIR}/gRPC-C++/grpcpp.framework
