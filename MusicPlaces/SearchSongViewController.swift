@@ -38,7 +38,13 @@ class SearchSongViewController: UIViewController {
         setupTableView()
         setupSearchBar()
     }
-
+    
+    //MARK: - public funcs
+    static func intance() -> SearchSongViewController {
+        let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+        guard let vc = storyBoard.instantiateViewController(identifier: "SearchSongVC") as? SearchSongViewController else { return SearchSongViewController() }
+        return vc
+    }
 }
 
 extension SearchSongViewController: UITableViewDelegate, UITableViewDataSource {
@@ -46,6 +52,7 @@ extension SearchSongViewController: UITableViewDelegate, UITableViewDataSource {
     func setupTableView() {
         self.tableView.delegate = self
         self.tableView.dataSource = self
+        self.tableView.tableFooterView = UIView()
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -68,6 +75,7 @@ extension SearchSongViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         delegate?.searchSong(didSelect: data[indexPath.row])
+        self.dismiss(animated: true, completion: nil)
     }
     
     func reloadTableView() {
