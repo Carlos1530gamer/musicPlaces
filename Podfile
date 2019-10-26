@@ -7,5 +7,6 @@ target 'MusicPlaces' do
 
   # Pods for MusicPlaces
   pod 'Pulley'
+  pod 'Firebase/Firestore'
 
 end
