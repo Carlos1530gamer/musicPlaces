@@ -29,6 +29,8 @@
 		3BE3231D236410D40080719F /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE3231C236410D40080719F /* UIViewExtension.swift */; };
 		3BE3231F23641C920080719F /* MusicHeaderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE3231E23641C920080719F /* MusicHeaderViewController.swift */; };
 		AE357DFC6B275680ECC926A1 /* Pods_MusicPlaces.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ECCED8AEB8EEBE745779D177 /* Pods_MusicPlaces.framework */; };
+		D43A9789236562F90003F388 /* BaseWebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D43A9788236562F80003F388 /* BaseWebService.swift */; };
+		D43A978B236564460003F388 /* reverseGeocoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = D43A978A236564460003F388 /* reverseGeocoding.swift */; };
 		D4E726DE2363EDA700718F83 /* Geolocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E726DD2363EDA700718F83 /* Geolocation.swift */; };
 /* End PBXBuildFile section */
 
@@ -58,6 +60,8 @@
 		3BE3231E23641C920080719F /* MusicHeaderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicHeaderViewController.swift; sourceTree = "<group>"; };
 		701E08A8A02FE0BF2D1C9C8E /* Pods-MusicPlaces.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MusicPlaces.release.xcconfig"; path = "Target Support Files/Pods-MusicPlaces/Pods-MusicPlaces.release.xcconfig"; sourceTree = "<group>"; };
 		8D816D3BB7807548B23CF382 /* Pods-MusicPlaces.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MusicPlaces.debug.xcconfig"; path = "Target Support Files/Pods-MusicPlaces/Pods-MusicPlaces.debug.xcconfig"; sourceTree = "<group>"; };
+		D43A9788236562F80003F388 /* BaseWebService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseWebService.swift; sourceTree = "<group>"; };
+		D43A978A236564460003F388 /* reverseGeocoding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = reverseGeocoding.swift; sourceTree = "<group>"; };
 		D4E726DD2363EDA700718F83 /* Geolocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Geolocation.swift; sourceTree = "<group>"; };
 		ECCED8AEB8EEBE745779D177 /* Pods_MusicPlaces.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MusicPlaces.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -111,6 +115,7 @@
 				3BA7D93B2363DAA0009FA251 /* AppDelegate.swift */,
 				3B7D499823648A31008722EF /* BaseWebService.swift */,
 				3BA7D93D2363DAA0009FA251 /* SceneDelegate.swift */,
+				D43A9788236562F80003F388 /* BaseWebService.swift */,
 				3BA7D9412363DAA0009FA251 /* Main.storyboard */,
 				3BA7D9442363DAA1009FA251 /* Assets.xcassets */,
 				3BA7D9462363DAA1009FA251 /* LaunchScreen.storyboard */,
@@ -125,6 +130,7 @@
 				3BE3231E23641C920080719F /* MusicHeaderViewController.swift */,
 				3B6FC7EC236438E90003DBE3 /* BottomMenuViewController.swift */,
 				3B6FC7FE236455370003DBE3 /* UITextFieldExtension.swift */,
+				D43A978A236564460003F388 /* reverseGeocoding.swift */,
 				3BAF117E2364918800C3626D /* FirebaseDependencie.swift */,
 				3BAF11842364BA2B00C3626D /* GetSongsById.swift */,
 			);
@@ -268,8 +274,10 @@
 				3BE3231D236410D40080719F /* UIViewExtension.swift in Sources */,
 				3BAF117F2364918800C3626D /* FirebaseDependencie.swift in Sources */,
 				3BE32317236401810080719F /* GetSongService.swift in Sources */,
+				D43A9789236562F90003F388 /* BaseWebService.swift in Sources */,
 				3B6FC7FF236455370003DBE3 /* UITextFieldExtension.swift in Sources */,
 				3BA7D93C2363DAA0009FA251 /* AppDelegate.swift in Sources */,
+				D43A978B236564460003F388 /* reverseGeocoding.swift in Sources */,
 				3BE32319236402060080719F /* Endpoitns.swift in Sources */,
 				3B6FC7ED236438E90003DBE3 /* BottomMenuViewController.swift in Sources */,
 				3BA7D93E2363DAA0009FA251 /* SceneDelegate.swift in Sources */,

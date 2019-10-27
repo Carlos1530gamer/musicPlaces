@@ -36,18 +36,14 @@ class ViewController: UIViewController {
     var location: CLLocation? {
         didSet {
             if let newLocation = location {
-                loadData(newLocation: newLocation) {
-                    DispatchQueue.main.async {[unowned self] in
-                        self.getLocationNameOf(newLocation)
-                        self.reloadTableView()
-                    }
-                }
+                getLocationNameForCoordinates(lat: location!.coordinate.latitude, lon: location!.coordinate.longitude, radius: 10)
             }
         }
     }
     
     var locationName: String? {
         willSet {
+            print(newValue)
             self.bottomView?.reloadData()
         }
     }
