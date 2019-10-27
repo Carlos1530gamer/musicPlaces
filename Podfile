@@ -7,5 +7,7 @@ target 'MusicPlaces' do
 
   # Pods for MusicPlaces
   pod 'Pulley'
+  pod 'Firebase/Firestore'
+  pod 'IBMWatsonAssistantV1', '~> 3.0.0'
 
 end
