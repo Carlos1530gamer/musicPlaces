@@ -30,13 +30,14 @@ class ViewController: UIViewController {
     var location: CLLocation? {
         didSet {
             if let newLocation = location {
-                getLocationNameOf(newLocation)
+                getLocationNameForCoordinates(lat: location!.coordinate.latitude, lon: location!.coordinate.longitude, radius: 10)
             }
         }
     }
     
     var locationName: String? {
         willSet {
+            print(newValue)
             self.bottomView?.reloadData()
         }
     }
